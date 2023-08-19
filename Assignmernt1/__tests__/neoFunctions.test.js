@@ -1,4 +1,4 @@
-const { getNeoInformation, getNeoByDesignation } = require('../app'); // Replace with the correct path
+const { getNeoInformation, getNeoByDesignation } = require('../app'); 
 
 describe('NEO Functions', () => {
   describe('getNeoInformation', () => {
@@ -19,6 +19,4 @@ describe('NEO Functions', () => {
       // Add an assertion that checks if the returned value is null
     });
   });
-
-  // Add more test cases for other functions if needed
 });

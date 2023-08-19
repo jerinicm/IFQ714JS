@@ -1,81 +1,3 @@
-// const fs = require('fs');
-// const data = fs.readFileSync("Assessment_1_NEOWISE_Dataset.json", "utf8");
-
-// // Now you can use the 'data' variable to access the JSON data in your Node.js project
-// console.log(data);
-/////////////////////////////////////////////////////////////////////////////////////////////
-// const fs = require('fs');
-
-// function getNeoInformation(index) {
-//   const data = fs.readFileSync("Assessment_1_NEOWISE_Dataset.json", "utf8");
-//   const NEO = JSON.parse(data);
-
-//   return NEO[index] || null;
-// }
-
-// // Example: Get NEO information at index 2
-// const neoAtIndex2 = getNeoInformation(0);
-// console.log(neoAtIndex2);
-////////////////////////////////////////////////////////////////////////////////////////////
-// const fs = require('fs');
-
-// function getNeoInformation(index) {
-//   const data = fs.readFileSync("Assessment_1_NEOWISE_Dataset.json", "utf8");
-//   const NEO = JSON.parse(data);
-
-//   return NEO[index]["orbit_class"] || null;
-// }
-
-// function getNeoByDesignation(designation) {
-//   const data = fs.readFileSync("Assessment_1_NEOWISE_Dataset.json", "utf8");
-//   const neos = JSON.parse(data);
-
-//   return neos.find((neo) => neo.designation === designation) || null;
-// }
-
-// // Example: Get NEO information at certain index
-// const neoAtIndex = getNeoInformation(0);
-// console.log("NEO at requested index:", neoAtIndex);
-
-// // Example: Get NEO information with certain designation
-// const neoWithDesignation = getNeoByDesignation("419624 (2010 SO16)");
-// console.log("NEO with designation:", neoWithDesignation);
-///////////////////////////////////////////////////////////////////////////////////////////
-// const fs = require('fs');
-
-// function getNeoInformation(index) {
-//   const data = fs.readFileSync("Assessment_1_NEOWISE_Dataset.json", "utf8");
-//   const NEO = JSON.parse(data);
-
-//   return NEO[index] || null;
-// }
-
-// function getNeoByDesignation(designation) {
-//   const data = fs.readFileSync("Assessment_1_NEOWISE_Dataset.json", "utf8");
-//   const neos = JSON.parse(data);
-
-//   return neos.find((neo) => neo.designation === designation) || null;
-// }
-
-// function displayAllNEOs() {
-//   const data = fs.readFileSync("Assessment_1_NEOWISE_Dataset.json", "utf8");
-//   const neos = JSON.parse(data);
-
-//   neos.forEach((neo, index) => {
-//     console.log(`NEO at index ${index}:`, neo);
-//   });
-// }
-
-// // Example: Get NEO information at certain index
-// const neoAtIndex = getNeoInformation(0);
-// console.log("NEO at requested index:", neoAtIndex);
-
-// // Example: Get NEO information with certain designation
-// const neoWithDesignation = getNeoByDesignation("419624 (2010 SO16)");
-// console.log("NEO with designation:", neoWithDesignation);
-
-// // Example: Display information on all NEOs in the dataset
-// displayAllNEOs();
 
 const fs = require('fs');
 
@@ -122,15 +44,17 @@ function rearrangeDataByOrbitClass(orbitClassValue) {
     return filteredNEOs;
   }
 
+// Uncomment below if you want to manually test functions
+
 // Example: Get NEO information at certain index /
 // const neoAtIndex = getNeoInformation(0);
 // console.log("NEO at requested index:", neoAtIndex);
 
-// // Example: Get NEO information with certain designation
-// const neoWithDesignation = getNeoByDesignation("419624 (2010 SO16)");
-// console.log("NEO with designation:", neoWithDesignation);
+// Example: Get NEO information with certain designation
+const neoWithDesignation = getNeoByDesignation("419624 (2010 SO16)");
+console.log("NEO with designation:", neoWithDesignation);
 
-// // Example: Display information on all NEOs in the dataset
+// Example Display information on all NEOs in the dataset
 // const allNEOs = displayAllNEOs();
 // console.log("All NEOs:", allNEOs);
 
